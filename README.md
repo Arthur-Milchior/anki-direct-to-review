@@ -10,16 +10,18 @@ developping it.
 The gear now contains an "overview" button, for people actually
 wanting to go to overview.
 
+This deals with the three main way of accessing review: clicking on a
+deck name, pressing the shortcut "s" or "/".
+
+
 ## Internal
 It changes:
 * `AnkiQt.onOverview` by calling directly `onReview`
+* `AnkiQt.onStudyDeck`
+* `AnkiQt.onStudyKey`
 
 ## Version 2.0
 None
-
-## TODO
-Ensure that it's direct to reviewing, even with clicking "s" and
-selecting a deck in the deck chooser.
 
 ## Links, licence and credits
 
