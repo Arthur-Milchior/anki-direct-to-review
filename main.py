@@ -34,3 +34,19 @@ for shortcut in mw.findChildren(QShortcut):
         shortcut.disconnect()
         shortcut.activated.connect(mw.onStudyKey)
         break
+
+
+def onStudyDeck(self):
+    from aqt.studydeck import StudyDeck
+    ret = StudyDeck(
+        self, dyn=True, current=self.col.decks.current()['name'])
+    if ret.name:
+        self.col.decks.select(self.col.decks.id(ret.name))
+        self.onReview()
+
+
+AnkiQt.onStudyDeck = onStudyDeck
+
+m = mw.form
+m.actionStudyDeck.triggered.disconnect()
+m.actionStudyDeck.triggered.connect(mw.onStudyDeck)
