@@ -13,6 +13,8 @@ wanting to go to overview.
 This deals with the three main way of accessing review: clicking on a
 deck name, pressing the shortcut "s" or "/".
 
+## Incompatible add-ons
+The [progress bar](https://ankiweb.net/shared/info/2091361802) won't start when you install this add-on. 
 
 ## Internal
 It changes:
